@@ -1,21 +1,25 @@
-// var pageHeight;
-// var contentHeight;
-// var pages;
-//
-// function puts(string) {
-//   console.log(string);
-// }
-//
-// function offsetForPage(page) {
-//   var initial = page * pageHeight;
-//   var final = initial + pageHeight;
-//   var offset = $(document).scrollTop();
-//
-//   var visibleHeight = Math.abs(pageHeight - initial - offset);
-//   visibleHeight = Math.min(pageHeight, Math.max(0, visibleHeight));
-//
-//   return (visibleHeight / pageHeight) * 100;
-// }
+var pageHeight;
+var contentHeight;
+var pages;
+
+function fadeOutPercentage(page) {
+  var initial = page * pageHeight;
+  var final = initial + pageHeight;
+  var offset = $(document).scrollTop();
+
+  if (offset >= initial) {
+    return 1.0 - Math.min(1.0, Math.max(0, (offset - initial) / pageHeight));
+  }
+  else if (offset < initial) {
+    return 1.0
+  }
+
+  return 0;
+}
+
+function updateAlpha(id, alpha) {
+  $(id).css("opacity", alpha);
+}
 
 $(document).ready(function(){
   pageHeight = $(window).height();
@@ -27,8 +31,15 @@ $(document).ready(function(){
   });
 });
 
-// $(window).scroll(function() {
-//   puts("Page 0: " + offsetForPage(0));
-//   puts("Page 1: " + offsetForPage(1));
-//   puts("Page 2: " + offsetForPage(2));
-// });
+$(window).scroll(function() {
+  // First page
+  var opacity = fadeOutPercentage(0);
+  updateAlpha(".quote", opacity);
+  updateAlpha("img.device", 1 - opacity);
+
+  // Second page
+  opacity = fadeOutPercentage(1);
+  if (opacity < 1) {
+    updateAlpha(".snippet-image-1", opacity - 0.8);
+  }
+});
