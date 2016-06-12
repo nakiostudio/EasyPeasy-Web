@@ -1,0 +1,63 @@
+<div class="container-fluid full-height content-layer">
+  <div class="row full-height quote">
+    <div class="col-md-12 text-center vertical-center">
+      <h1>“...if you prefer your Auto Layout hand<br>
+      crafted in code then you might want to<br>
+      have a look at this new library (...)<br>
+      There's plenty of libraries that give a<br>
+      new syntax to NSLayoutConstraints, but<br>
+      I really liked the look of this one...”</h1>
+      <h2>iOS Dev Weekly, issue 246</h2>
+    </div>
+  </div>
+  <div class="row full-height snippet">
+    <div class="col-md-offset-6 col-md-3 text-left vertical-center">
+      <span class="code-green">red</span> <- [<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-green">Size</span>(<span class="code-blue">*0.5</span>),<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-green">Center</span>(<span class="code-blue">0.0</span>)<br>
+      ]<br><br>
+      <span class="code-green">blue</span> <- [<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-green">Size</span>(<span class="code-blue">20.0</span>).<span class="code-green">like</span>(<span class="code-green">red</span>),<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-green">Center</span>(<span class="code-blue">0.0</span>).<span class="code-green">to</span>(<span class="code-green">red</span>)<br>
+      ]<br>
+    </div>
+  </div>
+
+  <div class="row full-height snippet">
+    <div class="col-md-offset-6 col-md-6 text-left vertical-center">
+      /**<br>
+      <br>
+      */<br><br>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3 text-left">
+            blue <- [<br>
+            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Size(80),<br>
+            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Top(10),<br>
+            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Left(10)<br>
+            ]<br><br>
+            green <- [<br>
+            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Top(10),<br>
+            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Left(10).to(blue),<br>
+            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Right(10)),<br>
+            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height(>=0)<br>
+            ]
+          </div>
+          <div class="col-md-4 text-left">
+            grey <- [<br>
+            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Top(0).to(green),<br>
+            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Left(0).to(blue),<br>
+            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Right(10),<br>
+            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height(>=0)<br>
+            ]<br><br>
+            red <- [<br>
+            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Top(0), Right(0), Left(0),<br>
+            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height(>=100).with(.MediumPriority),<br>
+            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bottom(10).to(grey, .Bottom)<br>
+            ]
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
