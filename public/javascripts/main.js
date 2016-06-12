@@ -39,7 +39,7 @@ $(window).scroll(function() {
 
   // Second page
   opacity = fadeOutPercentage(1);
-  if (opacity < 1.0) {
+  if (opacity < 0.9) {
     updateAlpha(".snippet-image-1", opacity - 0.75);
   }
 });
