@@ -29,6 +29,12 @@ $(document).ready(function(){
   $(".github-link").on( "click", function() {
     window.open("https://github.com/nakiostudio/EasyPeasy", "_self");
   });
+  $(".cocoapods-link").on( "click", function() {
+    window.open("http://cocoapods.org/pods/EasyPeasy", "_self");
+  });
+  $(".cocoadocs-link").on( "click", function() {
+    window.open("http://cocoadocs.org/docsets/EasyPeasy", "_self");
+  });
 });
 
 $(window).scroll(function() {
