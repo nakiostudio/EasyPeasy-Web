@@ -38,14 +38,32 @@ $(document).ready(function(){
 });
 
 $(window).scroll(function() {
-  // First page
+  // 1st page
   var opacity = fadeOutPercentage(0);
   updateAlpha(".quote", opacity);
   updateAlpha("img.device", 1 - opacity);
 
-  // Second page
+  // 2nd page
   opacity = fadeOutPercentage(1);
   if (opacity < 0.9) {
     updateAlpha(".snippet-image-1", opacity - 0.75);
+  }
+
+  // 3rd page
+  opacity = fadeOutPercentage(2);
+  if (opacity < 0.9) {
+    updateAlpha(".snippet-image-2", opacity - 0.75);
+  }
+
+  // 4th page
+  opacity = fadeOutPercentage(3);
+  if (opacity < 0.9) {
+    updateAlpha(".snippet-image-3", opacity - 0.75);
+  }
+
+  // 5th page
+  opacity = fadeOutPercentage(4);
+  if (opacity < 0.9) {
+    updateAlpha(".snippet-image-4", opacity - 0.75);
   }
 });

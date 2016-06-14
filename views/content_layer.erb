@@ -28,9 +28,59 @@
     </div>
   </div>
 
+  <div class="row full-height snippet">
+    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10 col-md-offset-6 col-md-3 text-left vertical-center">
+      <span class="code-comment">
+        /**<br>
+        It supports UILayoutGuides, just deal with them as you would do with a regular UIView.<br>
+        */
+      </span><br><br>
+      <span class="code-green">layoutGuide</span> <- [<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-green">Size</span>(<span class="code-blue">CGSize(220.0, 130.0)</span>),<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-green">Center</span>(<span class="code-blue">0.0</span>)<br>
+      ]<br><br>
+      <span class="code-green">red</span> <- [<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-green">Width</span>(<span class="code-blue">*0.5</span>).<span class="code-green">like</span>(<span class="code-green">layoutGuide</span>),<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-green">Leading</span>(<span class="code-blue">0.0</span>).<span class="code-green">to</span>(<span class="code-green">layoutGuide</span>),<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-green">CenterY</span>(<span class="code-blue">0.0</span>).<span class="code-green">to</span>(<span class="code-green">layoutGuide</span>),<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-green">Height</span>(<span class="code-blue">50.0</span>),<br>
+      ]<br><br>...<br>
+    </div>
+  </div>
+
+  <div class="row full-height snippet">
+    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10 col-md-offset-6 col-md-3 text-left vertical-center">
+      <span class="code-comment">
+        /**<br>
+        Easily apply lambdas to your constraints.<br>
+        */
+      </span><br><br>
+      <span class="code-green">blue</span> <- [<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-green">Size</span>(<span class="code-blue">90.0</span>),<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-green">Center</span>(<span class="code-blue">0.0</span>)<br>
+      ].<span class="code-green">when</span>{<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-green">Device()</span> == <span class="code-green">.iPhone</span>
+      <br>}<br>
+    </div>
+  </div>
+
+  <div class="row full-height snippet">
+    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10 col-md-offset-6 col-md-3 text-left vertical-center">
+      <span class="code-comment">
+        /**<br>
+        But these are just few examples of EasyPeasy's potential.<br><br>
+        - Automatic resolution of Auto Layout conflicts.<br>
+        - Fast and hassle-free update of constraints.<br>
+        - 100% code coverage.<br>
+        - 75% documented code.<br>
+        */
+      </span>
+    </div>
+  </div>
+
   <div class="row full-height landing">
     <div class="col-md-offset-4 col-md-4 text-center links vertical-center">
-      <button type="button" class="btn btn-lg btn-secondary github-clone github-link">It's EasyPeasy</button>
+      <button type="button" class="btn btn-lg btn-secondary github-clone github-link">$> git clone git@github.com:nakiostudio/EasyPeasy.git</button>
     </div>
   </div>
 </div>
