@@ -26,14 +26,14 @@ $(document).ready(function(){
   contentHeight = $(document).height();
   pages = contentHeight / pageHeight;
 
-  $(".github-link").on( "click", function() {
+  // Automatic scroll
+  $('html,body').delay(4000).animate({
+    scrollTop:$('#first-snippet').offset().top
+  }, 1000);
+
+  // Bindings
+  $(".github-link").on("click", function() {
     window.open("https://github.com/nakiostudio/EasyPeasy", "_self");
-  });
-  $(".cocoapods-link").on( "click", function() {
-    window.open("http://cocoapods.org/pods/EasyPeasy", "_self");
-  });
-  $(".cocoadocs-link").on( "click", function() {
-    window.open("http://cocoadocs.org/docsets/EasyPeasy", "_self");
   });
 });
 
